@@ -8,7 +8,7 @@
     const startTimer = () => {
         let minTag = document.getElementById("min");
         let secTag = document.getElementById("sec");
-        clearInterval(interval)
+        // clearInterval(interval)
         interval = setInterval(() => {
             if (sec < 60) {
                 sec++;
@@ -27,6 +27,8 @@
                 minTag.innerText = `${min}`
             }
         }, 1000);
+        startEvent.disabled = true;
+        startEvent.style.backgroundColor = 'rgb(193, 190, 188)'
     }
     const resetTimer = () => {
         let min = document.getElementById("min");
@@ -37,11 +39,13 @@
 
     }
     const stopTimer = () => {
-        clearInterval(interval)
+        clearInterval(interval);
+        startEvent.disabled = false;
+        startEvent.style.backgroundColor = 'rgb(141, 245, 141)';
     }
-    window.onload=function(){
+    window.onload = function () {
         resetEvent.addEventListener('click', resetTimer);
         startEvent.addEventListener('click', startTimer);
         stopEvent.addEventListener('click', stopTimer)
-      }
+    }
 }());
