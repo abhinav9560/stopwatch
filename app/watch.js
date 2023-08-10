@@ -30,6 +30,7 @@
         startEvent.style.backgroundColor = 'rgb(193, 190, 188)'
     }
     const resetTimer = () => {
+        clearInterval(interval);
         let min = document.getElementById("min");
         let sec = document.getElementById("sec");
 
