@@ -38,6 +38,8 @@
         sec.innerText = '00';
         min = 0;
         sec = 0;
+        startEvent.disabled = false;
+        startEvent.style.backgroundColor = 'rgb(141, 245, 141)';
     }
     const stopTimer = () => {
         clearInterval(interval);
