@@ -3,8 +3,8 @@
     var startEvent = document.getElementById("start");
     var stopEvent = document.getElementById("stop");
     var interval;
-    let sec = 0;
-    let min = 0;
+    var sec = 0;
+    var min = 0;
     const startTimer = () => {
         let minTag = document.getElementById("min");
         let secTag = document.getElementById("sec");
