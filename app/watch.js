@@ -8,7 +8,6 @@
     const startTimer = () => {
         let minTag = document.getElementById("min");
         let secTag = document.getElementById("sec");
-        // clearInterval(interval)
         interval = setInterval(() => {
             if (sec < 60) {
                 sec++;
@@ -36,7 +35,8 @@
 
         min.innerText = '00';
         sec.innerText = '00';
-
+        min = 0;
+        sec = 0;
     }
     const stopTimer = () => {
         clearInterval(interval);
